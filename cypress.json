@@ -9,6 +9,8 @@
     "pageLoadTimeout": 40000,
     "screenshotsFolder": "report/screenshots",
     "env" : {
-        "NO_OF_SCROLL" : 3
+        "NO_OF_SCROLL" : 3,
+        "USERNAME" : "write your username for baseurl",
+        "PASSWORD" :  "write your password for baseurl"
     }
 }
