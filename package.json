@@ -1,0 +1,19 @@
+{
+  "name": "testing-poc",
+  "version": "1.0.0",
+  "description": "testing-poc using cypress and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.2.0",
+    "cypress-cucumber-preprocessor": "^1.11.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

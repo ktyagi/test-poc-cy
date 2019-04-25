@@ -1,0 +1,14 @@
+{
+    "baseUrl": "https://www.facebook.com/",
+    "ignoreTestFiles": [
+        "*.js",
+        "*.md"
+    ],
+    "defaultCommandTimeout": 40000,
+    "video": false,
+    "pageLoadTimeout": 40000,
+    "screenshotsFolder": "report/screenshots",
+    "env" : {
+        "NO_OF_SCROLL" : 3
+    }
+}
