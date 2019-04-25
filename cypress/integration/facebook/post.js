@@ -41,14 +41,8 @@ function likePost($subject, postText) {
                     })
                 })
             }
-            if (index + 1 === $els.length && postFound.length > 0) {
-                postFound.forEach((el) => {
-                    cy.log("Post liked " + el)
-                })
-            }
-            if (index + 1 === $els.length) {
-                cy.log("No of Post liked " + postFound.length)
-            }
+            if (index + 1 === $els.length && postFound.length > 0) { postFound.forEach((el) => { cy.log("Post liked " + el) }) }
+            if (index + 1 === $els.length) cy.log("No of Post liked " + postFound.length)
         }).then(() => { expect(postFound.length).to.be.greaterThan(0) })
     return cy.wrap($subject)
 }
@@ -67,21 +61,15 @@ function deletePost($subject, postText) {
             let post = $el.text().toLowerCase()
             if (post === postText) {
                 postFound.push(post)
-                cy.wrap($el).closest('div[class*="userContentWrapper"]').then(($ele) =>{
+                cy.wrap($el).closest('div[class*="userContentWrapper"]').then(($ele) => {
                     cy.wrap($ele).find('a[data-testid="post_chevron_button"]').click();
                     cy.get('a[data-feed-option-name="FeedDeleteOption"]').click({ force: true })
                     cy.get('button[class*="uiOverlayButton"]').click({ force: true })
                     cy.wrap($el).closest('div[class*="userContentWrapper"] p').should('not.exist')
                 })
             }
-            if (index + 1 === $els.length && postFound.length > 0) {
-                postFound.forEach((el) => {
-                    cy.log("Post deleted " + el)
-                })
-            }
-            if (index + 1 === $els.length) {
-                cy.log("No of Post deleted " + postFound.length)
-            }
+            if (index + 1 === $els.length && postFound.length > 0) { postFound.forEach((el) => { cy.log("Post deleted " + el) }) }
+            if (index + 1 === $els.length) cy.log("No of Post deleted " + postFound.length) 
         }).then(() => { expect(postFound.length).to.be.greaterThan(0) })
     return cy.wrap($subject)
 }

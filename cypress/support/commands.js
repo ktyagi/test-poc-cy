@@ -11,7 +11,7 @@
 //
 // -- This is a parent command --
 Cypress.Commands.add("login", { prevSubject: true }, ($subject, username, password) => {
-    cy.debug()
+    cy
         .get('[data-testid="royal_email"]').type(username)
         .get('[data-testid="royal_pass"]').type(password)
         .get('[data-testid="royal_login_button"]').click()
@@ -20,12 +20,12 @@ Cypress.Commands.add("login", { prevSubject: true }, ($subject, username, passwo
 
 Cypress.Commands.add("scrollPage", { prevSubject: 'optional' }, ($subject, noOfTimes) => {
     for (let i = 1; i <= noOfTimes; i++) {
-      cy.window().then((win) => {
-        win.scrollBy(0, 500)
-      }).wait(10)
+        cy.window().then((win) => {
+            win.scrollBy(0, 500)
+        }).wait(10)
     }
     return cy.wrap($subject)
-  })
+})
 
 
 //

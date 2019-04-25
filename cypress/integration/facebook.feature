@@ -6,16 +6,16 @@ Feature: The Facebook
     Given User "Tyagi Kumar Kuldeep" is logged in successfully
     When User Navigates to Profile
     Then User sees "tyagitester" in the url
-    And Want to create post with "hi123451"
+    And Want to create post with "hi1"
   @focus
   Scenario: Like Post
     Given User "Tyagi Kumar Kuldeep" is logged in successfully
     When User Navigates to Profile
     Then User sees "tyagitester" in the url
-    And Want to like all posts with "hi123451"
+    And Want to like all posts with "hi1"
   @focus
   Scenario: Delete Post
     Given User "Tyagi Kumar Kuldeep" is logged in successfully
     When User Navigates to Profile
     Then User sees "tyagitester" in the url
-    And Want to delete all posts with "hi123451"
+    And Want to delete all posts with "hi1"
