@@ -6,10 +6,11 @@ Clone this repository
 
 Run command "npm install" to install dependencies 
 
-Navigate to file (\testing-poc\cypress\integration\common\beforeEach.js) and give facebook username and credential in login method 
+Navigate to file (\testing-poc\cypress.json) and update facebook username and password  
 
-Navigate to file (\testing-poc\cypress\integration\login.feature ) either comment this line (Given User "Tyagi Kumar Kuldeep" is logged in successfully)
-in all scenarios or change the text to whatever is displayed on top right corner after user logged in and click on home page in FB
+Navigate to file (\testing-poc\cypress\integration\login.feature ) either update data for below lines in each scenario or comment :
+Given User "Tyagi Kumar Kuldeep" is logged in successfully
+Then User sees "tyagitester" in the url
 
 run command "npm run cy:open" (To run test in GUI mode),
 wait for GUI runner to come up,
