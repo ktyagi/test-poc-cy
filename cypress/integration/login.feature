@@ -1,6 +1,7 @@
 Feature: The Facebook
+# make sure user do not create same post consecutively  as FB does not allow it
 
-  I want to test post creatio,n like and delete functionality
+  I want to test post creation like and delete functionality
 
   @focus
   Scenario: Create Post

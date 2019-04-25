@@ -1,4 +1,4 @@
-
+//Create post 
 function createPost($subject, postText) {
     cy
         .get('[data-referrer="profile_timeline_overview_switcher_pagelet"]').should('be.visible')
@@ -17,6 +17,7 @@ function createPost($subject, postText) {
     Cypress.Commands.add("createPost", { prevSubject: 'optional' }, createPost)
 })();
 
+// like no of posts matchig given text and loaded in page
 function likePost($subject, postText) {
     let postFound = [];
     cy
@@ -57,6 +58,7 @@ function likePost($subject, postText) {
     Cypress.Commands.add("likePost", { prevSubject: 'optional' }, likePost)
 })();
 
+// Delete no of posts matchig given text and loaded in page
 function deletePost($subject, postText) {
     let postFound = [];
     cy.get('[data-referrer="profile_timeline_overview_switcher_pagelet"]').should('be.visible')
